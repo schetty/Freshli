@@ -1,0 +1,20 @@
+<div class="inventoryView">
+  <div>
+      <input class="searchTextfield" type="text" name="enteredKeyword" [(ngModel)]="searchString" (keyup)="updateList()" placeholder="What are you looking for?"/>
+  </div>
+  
+  
+  <div>
+    <button class="sellButton" (click)="goToSaleScreen()">sell</button>
+  </div>
+  
+
+  <div class="inventoryItem" *ngFor="let item of displayedItems">
+    <div class="productName">
+      {{item.productName}}
+    </div>
+    remaining stock {{item.qty}} {{item.measureUnit}}<br/>
+    ${{item.pricePerUnit}} / {{item.measureUnit}}<br/><br/>
+  </div>
+
+</div>

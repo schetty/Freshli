@@ -1,0 +1,14 @@
+<div class="saleView">
+  <form (submit)="submitSale()">
+    <div class="dropOffScreenTextStyle"> I'm dropping off:</div>
+    <input class="stdTextfield" type="text" name="productName" [(ngModel)]="saleForm.productName" placeholder="Product"/>
+    <input class="stdTextfield" type="number" step="any" min="0" name="qty" [(ngModel)]="saleForm.qty" placeholder="Quantity"/>
+    <input class="stdTextfield" type="text" name="measureUnit" [(ngModel)]="saleForm.measureUnit" placeholder="Unit of measurement"/>
+    <input class="stdTextfield" type="number" step="0.01" min="0" name="unitPrice" [(ngModel)]="saleForm.pricePerUnit" placeholder="Price per unit ($)"/>
+    <input class="confirmSaleButton" type="submit" value="confirm sale"/>
+  </form>
+</div>
+
+<spinner *ngIf="sending"></spinner>
+
+
